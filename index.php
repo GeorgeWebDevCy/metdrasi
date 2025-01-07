@@ -7,18 +7,18 @@ if (!defined("ABSPATH")) {return;}
 return array (
   'published' => 
   array (
-    '11-vc-single-image-fix.php' => 
+    '17-vc_row-cleaner.php' => 
     array (
-      'name' => 'VC single image fix',
+      'name' => 'vc_row cleaner',
       'description' => '',
       'type' => 'PHP',
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-07 20:25:28',
+      'updated_at' => '2025-01-07 21:00:53',
       'run_at' => 'all',
       'priority' => 10,
-      'group' => 'VC filters for content fixes',
+      'group' => '',
       'condition' => 
       array (
         'status' => 'no',
@@ -31,7 +31,7 @@ return array (
         ),
       ),
       'load_as_file' => '',
-      'file_name' => '11-vc-single-image-fix.php',
+      'file_name' => '17-vc_row-cleaner.php',
     ),
     '2-add-post-types.php' => 
     array (
@@ -296,6 +296,32 @@ return array (
   ),
   'draft' => 
   array (
+    '11-vc-single-image-fix.php' => 
+    array (
+      'name' => 'VC single image fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-07 20:55:12',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => 'VC filters for content fixes',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '11-vc-single-image-fix.php',
+    ),
     '12-vc-carousel-to-divi.php' => 
     array (
       'name' => 'VC carousel to Divi slider',
@@ -457,7 +483,7 @@ return array (
   array (
     'all' => 
     array (
-      0 => '11-vc-single-image-fix.php',
+      0 => '17-vc_row-cleaner.php',
       1 => '2-add-post-types.php',
       2 => '3-add-taxonomies.php',
     ),
@@ -476,7 +502,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-07 20:25:28',
+    'cached_at' => '2025-01-07 21:00:53',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
