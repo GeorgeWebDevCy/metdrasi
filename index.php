@@ -33,6 +33,32 @@ return array (
       'load_as_file' => '',
       'file_name' => '17-vc_row-cleaner.php',
     ),
+    '18-vc_column-handler.php' => 
+    array (
+      'name' => 'vc_column handler',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-07 21:31:26',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '18-vc_column-handler.php',
+    ),
     '2-add-post-types.php' => 
     array (
       'name' => 'Add Post Types',
@@ -484,8 +510,9 @@ return array (
     'all' => 
     array (
       0 => '17-vc_row-cleaner.php',
-      1 => '2-add-post-types.php',
-      2 => '3-add-taxonomies.php',
+      1 => '18-vc_column-handler.php',
+      2 => '2-add-post-types.php',
+      3 => '3-add-taxonomies.php',
     ),
     'wp_head' => 
     array (
@@ -502,7 +529,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-07 21:00:53',
+    'cached_at' => '2025-01-07 21:31:26',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
