@@ -36,7 +36,7 @@ function remove_vc_column_shortcodes() {
         // Args for WP_Query for the current post type
         $args = [
             'post_type'      => $post_type,
-            'posts_per_page' => 50, // Batch size for processing
+            'posts_per_page' => 10, // Batch size for processing
             'offset'         => (int) get_option('remove_vc_column_offset_' . $post_type, 0),
         ];
 

@@ -36,7 +36,7 @@ function replace_vc_single_image_shortcode() {
         // Args for WP_Query for the current post type
         $args = [
             'post_type'      => $post_type,
-            'posts_per_page' => 50, // Batch size for processing
+            'posts_per_page' => 10, // Batch size for processing
             'offset'         => (int) get_option('replace_vc_single_image_offset_' . $post_type, 0),
         ];
 
