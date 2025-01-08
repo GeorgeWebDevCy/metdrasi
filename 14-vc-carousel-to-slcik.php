@@ -7,10 +7,10 @@
 * @group: VC filters for content fixes
 * @name: vc carousel to slcik slider
 * @type: PHP
-* @status: draft
+* @status: published
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-06 10:27:07
+* @updated_at: 2025-01-08 12:09:40
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -22,23 +22,36 @@
 <?php if (!defined("ABSPATH")) { return;} // <Internal Doc End> ?>
 <?php
 function replace_vc_images_carousel_with_slick_slider() {
-    global $wpdb;
+    // Get all public post types
+    $post_types = get_post_types(['public' => true], 'names');
 
-    // Check if the replacement has already been executed
-    if (get_option('vc_to_slick_replacement_done')) {
-        return; // Exit if already executed
-    }
+    // Prepare for browser console logging
+    $console_log = [
+        'processed_posts' => 0,
+        'total_posts'     => 0,
+        'remaining_posts' => 0,
+    ];
 
-    // Fetch all posts containing the [vc_images_carousel] shortcode
-    $posts = $wpdb->get_results("
-        SELECT ID, post_content
-        FROM {$wpdb->posts}
-        WHERE post_content LIKE '%[vc_images_carousel%'
-    ");
+    foreach ($post_types as $post_type) {
+        // Args for WP_Query for the current post type
+        $args = [
+            'post_type'      => $post_type,
+            'posts_per_page' => 50, // Batch size for processing
+            'offset'         => (int) get_option('replace_vc_images_carousel_offset_' . $post_type, 0),
+            's'              => '[vc_images_carousel', // Search for posts containing the shortcode
+        ];
 
-    if ($posts) {
-        foreach ($posts as $post) {
-            $original_content = $post->post_content;
+        // Execute WP_Query with args
+        $query = new WP_Query($args);
+
+        $console_log['total_posts'] += $query->found_posts;
+
+        while ($query->have_posts()) {
+            $query->the_post();
+
+            // Get Post Content
+            $post_id = get_the_ID();
+            $original_content = get_post_field('post_content', $post_id);
 
             // Replace [vc_images_carousel] with [slick_slider] using regex
             $updated_content = preg_replace_callback(
@@ -55,24 +68,56 @@ function replace_vc_images_carousel_with_slick_slider() {
                 $original_content
             );
 
-            // Update the post in the database if changes were made
+            // Update the post if the content has changed
             if ($updated_content !== $original_content) {
-                $wpdb->update(
-                    $wpdb->posts,
-                    array('post_content' => $updated_content),
-                    array('ID' => $post->ID),
-                    array('%s'),
-                    array('%d')
-                );
+                wp_update_post([
+                    'ID'           => $post_id,
+                    'post_content' => $updated_content,
+                ]);
             }
+
+            $console_log['processed_posts']++;
         }
 
-        // Mark the replacement as done
-        update_option('vc_to_slick_replacement_done', true);
+        // Update offset for batch processing
+        $processed_posts = $query->post_count;
+        $current_offset = (int) get_option('replace_vc_images_carousel_offset_' . $post_type, 0);
+        $new_offset = $current_offset + $processed_posts;
 
-        echo "Shortcode replacement completed successfully.";
-    } else {
-        echo "No posts found with the [vc_images_carousel] shortcode.";
+        if ($new_offset >= $query->found_posts) {
+            update_option('replace_vc_images_carousel_done_' . $post_type, true);
+            delete_option('replace_vc_images_carousel_offset_' . $post_type);
+        } else {
+            update_option('replace_vc_images_carousel_offset_' . $post_type, $new_offset);
+        }
+
+        $console_log['remaining_posts'] += $query->found_posts - $new_offset;
+
+        // Reset Post Data
+        wp_reset_postdata();
     }
+
+    // Output browser console log
+    echo '<script>';
+    echo 'console.log(' . json_encode($console_log) . ');';
+    echo '</script>';
 }
-add_action('admin_init', 'replace_vc_images_carousel_with_slick_slider');
+
+// Run the function in batches when needed
+add_action('init', function () {
+    // Process in batches until all posts are done
+    $done_for_all_post_types = true;
+
+    $post_types = get_post_types(['public' => true], 'names');
+    foreach ($post_types as $post_type) {
+        if (!get_option('replace_vc_images_carousel_done_' . $post_type)) {
+            $done_for_all_post_types = false;
+            replace_vc_images_carousel_with_slick_slider();
+            break; // Process one post type at a time per request
+        }
+    }
+
+    if ($done_for_all_post_types) {
+        echo '<script>console.log("All post types processed successfully, [vc_images_carousel] replaced with [slick_slider].");</script>';
+    }
+});
