@@ -7,58 +7,6 @@ if (!defined("ABSPATH")) {return;}
 return array (
   'published' => 
   array (
-    '13-replace-contact-form-7.php' => 
-    array (
-      'name' => 'Replace Contact Form 7 shortcodes with Fluent Forms shortcodes ONCE',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 14:45:18',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '13-replace-contact-form-7.php',
-    ),
-    '14-vc-carousel-to-slcik.php' => 
-    array (
-      'name' => 'vc carousel to slcik slider',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 13:30:22',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => 'VC filters for content fixes',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '14-vc-carousel-to-slcik.php',
-    ),
     '15-slick-shortcode.php' => 
     array (
       'name' => 'slick shortcode',
@@ -84,84 +32,6 @@ return array (
       ),
       'load_as_file' => '',
       'file_name' => '15-slick-shortcode.php',
-    ),
-    '17-vc_row-cleaner.php' => 
-    array (
-      'name' => 'vc_row cleaner',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 11:56:15',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '17-vc_row-cleaner.php',
-    ),
-    '18-vc_column-handler.php' => 
-    array (
-      'name' => 'vc_column handler',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-07 21:31:26',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '18-vc_column-handler.php',
-    ),
-    '19-vc_colum_text-handler.php' => 
-    array (
-      'name' => 'vc_colum_text handler',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 11:57:22',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '19-vc_colum_text-handler.php',
     ),
     '2-add-post-types.php' => 
     array (
@@ -189,16 +59,16 @@ return array (
       'load_as_file' => '',
       'file_name' => '2-add-post-types.php',
     ),
-    '20-facebook-video-embed-replacement.php' => 
+    '24-code-from-customizer-that.php' => 
     array (
-      'name' => 'facebook video embed replacement',
+      'name' => 'code from customizer that was making me insane',
       'description' => '',
-      'type' => 'PHP',
+      'type' => 'css',
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-08 14:02:26',
-      'run_at' => 'all',
+      'updated_at' => '2025-01-08 15:52:34',
+      'run_at' => 'wp_head',
       'priority' => 10,
       'group' => '',
       'condition' => 
@@ -213,59 +83,7 @@ return array (
         ),
       ),
       'load_as_file' => '',
-      'file_name' => '20-facebook-video-embed-replacement.php',
-    ),
-    '21-facebook-iframe-parameter-cleaner.php' => 
-    array (
-      'name' => 'facebook iframe parameter cleaner',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 14:10:49',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '21-facebook-iframe-parameter-cleaner.php',
-    ),
-    '22-remove-trailing-parameters.php' => 
-    array (
-      'name' => 'remove trailing parameters',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 14:17:00',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '22-remove-trailing-parameters.php',
+      'file_name' => '24-code-from-customizer-that.php',
     ),
     '3-add-taxonomies.php' => 
     array (
@@ -301,7 +119,7 @@ return array (
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2024-11-30 18:00:37',
+      'updated_at' => '2025-01-08 15:47:36',
       'run_at' => 'wp_head',
       'priority' => 10,
       'group' => '',
@@ -501,32 +319,6 @@ return array (
       'load_as_file' => '',
       'file_name' => '9-gallery-grid-fix-2x2.php',
     ),
-    '10-fix-video-module-from.php' => 
-    array (
-      'name' => 'Fix video module from VC',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'published',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 13:36:22',
-      'run_at' => 'all',
-      'priority' => 99,
-      'group' => 'VC filters for content fixes',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '10-fix-video-module-from.php',
-    ),
   ),
   'draft' => 
   array (
@@ -582,6 +374,58 @@ return array (
       'load_as_file' => '',
       'file_name' => '12-vc-carousel-to-divi.php',
     ),
+    '13-replace-contact-form-7.php' => 
+    array (
+      'name' => 'Replace Contact Form 7 shortcodes with Fluent Forms shortcodes ONCE',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:57',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '13-replace-contact-form-7.php',
+    ),
+    '14-vc-carousel-to-slcik.php' => 
+    array (
+      'name' => 'vc carousel to slcik slider',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:21:23',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => 'VC filters for content fixes',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '14-vc-carousel-to-slcik.php',
+    ),
     '16-delete-all-posts-once.php' => 
     array (
       'name' => 'delete all posts once',
@@ -607,6 +451,162 @@ return array (
       ),
       'load_as_file' => '',
       'file_name' => '16-delete-all-posts-once.php',
+    ),
+    '17-vc_row-cleaner.php' => 
+    array (
+      'name' => 'vc_row cleaner',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:49',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '17-vc_row-cleaner.php',
+    ),
+    '18-vc_column-handler.php' => 
+    array (
+      'name' => 'vc_column handler',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:50',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '18-vc_column-handler.php',
+    ),
+    '19-vc_colum_text-handler.php' => 
+    array (
+      'name' => 'vc_colum_text handler',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:52',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '19-vc_colum_text-handler.php',
+    ),
+    '20-facebook-video-embed-replacement.php' => 
+    array (
+      'name' => 'facebook video embed replacement',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:01',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '20-facebook-video-embed-replacement.php',
+    ),
+    '21-facebook-iframe-parameter-cleaner.php' => 
+    array (
+      'name' => 'facebook iframe parameter cleaner',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:21:45',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '21-facebook-iframe-parameter-cleaner.php',
+    ),
+    '22-remove-trailing-parameters.php' => 
+    array (
+      'name' => 'remove trailing parameters',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:22:37',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '22-remove-trailing-parameters.php',
     ),
     '23-lfuent-form-button-color.php' => 
     array (
@@ -634,40 +634,58 @@ return array (
       'load_as_file' => '',
       'file_name' => '23-lfuent-form-button-color.php',
     ),
+    '10-fix-video-module-from.php' => 
+    array (
+      'name' => 'Fix video module from VC',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 15:21:01',
+      'run_at' => 'all',
+      'priority' => 99,
+      'group' => 'VC filters for content fixes',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '10-fix-video-module-from.php',
+    ),
   ),
   'hooks' => 
   array (
     'all' => 
     array (
-      0 => '13-replace-contact-form-7.php',
-      1 => '14-vc-carousel-to-slcik.php',
-      2 => '15-slick-shortcode.php',
-      3 => '17-vc_row-cleaner.php',
-      4 => '18-vc_column-handler.php',
-      5 => '19-vc_colum_text-handler.php',
-      6 => '2-add-post-types.php',
-      7 => '20-facebook-video-embed-replacement.php',
-      8 => '21-facebook-iframe-parameter-cleaner.php',
-      9 => '22-remove-trailing-parameters.php',
-      10 => '3-add-taxonomies.php',
-      11 => '10-fix-video-module-from.php',
+      0 => '15-slick-shortcode.php',
+      1 => '2-add-post-types.php',
+      2 => '3-add-taxonomies.php',
     ),
     'wp_head' => 
     array (
-      0 => '3-fix-grid-on-ceb8ceb5cf83ceb5ceb9cf82.php',
-      1 => '4-fix-number-counter-on.php',
-      2 => '5-hide-menu-caret-on.php',
-      3 => '6-menu-line-height-fix.php',
-      4 => '7-read-more-postion-fix.php',
-      5 => '8-fix-vc-fluid-grid.php',
-      6 => '9-gallery-grid-fix-2x2.php',
+      0 => '24-code-from-customizer-that.php',
+      1 => '3-fix-grid-on-ceb8ceb5cf83ceb5ceb9cf82.php',
+      2 => '4-fix-number-counter-on.php',
+      3 => '5-hide-menu-caret-on.php',
+      4 => '6-menu-line-height-fix.php',
+      5 => '7-read-more-postion-fix.php',
+      6 => '8-fix-vc-fluid-grid.php',
+      7 => '9-gallery-grid-fix-2x2.php',
     ),
   ),
   'meta' => 
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-08 14:57:15',
+    'cached_at' => '2025-01-08 15:52:34',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',

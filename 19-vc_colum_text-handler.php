@@ -7,10 +7,10 @@
 * @group: 
 * @name: vc_colum_text handler
 * @type: PHP
-* @status: published
+* @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-08 11:57:22
+* @updated_at: 2025-01-08 15:22:52
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
