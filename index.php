@@ -608,6 +608,32 @@ return array (
       'load_as_file' => '',
       'file_name' => '16-delete-all-posts-once.php',
     ),
+    '23-lfuent-form-button-color.php' => 
+    array (
+      'name' => 'lfuent form button color',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 14:57:15',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '23-lfuent-form-button-color.php',
+    ),
   ),
   'hooks' => 
   array (
@@ -641,7 +667,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-08 14:45:18',
+    'cached_at' => '2025-01-08 14:57:15',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
