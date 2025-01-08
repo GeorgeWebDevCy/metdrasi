@@ -163,6 +163,84 @@ return array (
       'load_as_file' => '',
       'file_name' => '2-add-post-types.php',
     ),
+    '20-facebook-video-embed-replacement.php' => 
+    array (
+      'name' => 'facebook video embed replacement',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 14:02:26',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '20-facebook-video-embed-replacement.php',
+    ),
+    '21-facebook-iframe-parameter-cleaner.php' => 
+    array (
+      'name' => 'facebook iframe parameter cleaner',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 14:10:49',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '21-facebook-iframe-parameter-cleaner.php',
+    ),
+    '22-remove-trailing-parameters.php' => 
+    array (
+      'name' => 'remove trailing parameters',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 14:17:00',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '22-remove-trailing-parameters.php',
+    ),
     '3-add-taxonomies.php' => 
     array (
       'name' => 'Add Taxonomies',
@@ -397,6 +475,32 @@ return array (
       'load_as_file' => '',
       'file_name' => '9-gallery-grid-fix-2x2.php',
     ),
+    '10-fix-video-module-from.php' => 
+    array (
+      'name' => 'Fix video module from VC',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 13:36:22',
+      'run_at' => 'all',
+      'priority' => 99,
+      'group' => 'VC filters for content fixes',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '10-fix-video-module-from.php',
+    ),
   ),
   'draft' => 
   array (
@@ -504,32 +608,6 @@ return array (
       'load_as_file' => '',
       'file_name' => '16-delete-all-posts-once.php',
     ),
-    '10-fix-video-module-from.php' => 
-    array (
-      'name' => 'Fix video module from VC',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'draft',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2024-12-19 08:25:25',
-      'run_at' => 'all',
-      'priority' => 99,
-      'group' => 'VC filters for content fixes',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '10-fix-video-module-from.php',
-    ),
   ),
   'hooks' => 
   array (
@@ -541,7 +619,11 @@ return array (
       3 => '18-vc_column-handler.php',
       4 => '19-vc_colum_text-handler.php',
       5 => '2-add-post-types.php',
-      6 => '3-add-taxonomies.php',
+      6 => '20-facebook-video-embed-replacement.php',
+      7 => '21-facebook-iframe-parameter-cleaner.php',
+      8 => '22-remove-trailing-parameters.php',
+      9 => '3-add-taxonomies.php',
+      10 => '10-fix-video-module-from.php',
     ),
     'wp_head' => 
     array (
@@ -558,7 +640,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-08 13:30:22',
+    'cached_at' => '2025-01-08 14:17:00',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
