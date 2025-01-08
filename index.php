@@ -7,6 +7,32 @@ if (!defined("ABSPATH")) {return;}
 return array (
   'published' => 
   array (
+    '13-replace-contact-form-7.php' => 
+    array (
+      'name' => 'Replace Contact Form 7 shortcodes with Fluent Forms shortcodes ONCE',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-08 14:45:18',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '13-replace-contact-form-7.php',
+    ),
     '14-vc-carousel-to-slcik.php' => 
     array (
       'name' => 'vc carousel to slcik slider',
@@ -556,32 +582,6 @@ return array (
       'load_as_file' => '',
       'file_name' => '12-vc-carousel-to-divi.php',
     ),
-    '13-replace-contact-form-7.php' => 
-    array (
-      'name' => 'Replace Contact Form 7 shortcodes with Fluent Forms shortcodes ONCE',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'draft',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2024-12-17 14:29:05',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => '',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '13-replace-contact-form-7.php',
-    ),
     '16-delete-all-posts-once.php' => 
     array (
       'name' => 'delete all posts once',
@@ -613,17 +613,18 @@ return array (
   array (
     'all' => 
     array (
-      0 => '14-vc-carousel-to-slcik.php',
-      1 => '15-slick-shortcode.php',
-      2 => '17-vc_row-cleaner.php',
-      3 => '18-vc_column-handler.php',
-      4 => '19-vc_colum_text-handler.php',
-      5 => '2-add-post-types.php',
-      6 => '20-facebook-video-embed-replacement.php',
-      7 => '21-facebook-iframe-parameter-cleaner.php',
-      8 => '22-remove-trailing-parameters.php',
-      9 => '3-add-taxonomies.php',
-      10 => '10-fix-video-module-from.php',
+      0 => '13-replace-contact-form-7.php',
+      1 => '14-vc-carousel-to-slcik.php',
+      2 => '15-slick-shortcode.php',
+      3 => '17-vc_row-cleaner.php',
+      4 => '18-vc_column-handler.php',
+      5 => '19-vc_colum_text-handler.php',
+      6 => '2-add-post-types.php',
+      7 => '20-facebook-video-embed-replacement.php',
+      8 => '21-facebook-iframe-parameter-cleaner.php',
+      9 => '22-remove-trailing-parameters.php',
+      10 => '3-add-taxonomies.php',
+      11 => '10-fix-video-module-from.php',
     ),
     'wp_head' => 
     array (
@@ -640,7 +641,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-08 14:17:00',
+    'cached_at' => '2025-01-08 14:45:18',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
