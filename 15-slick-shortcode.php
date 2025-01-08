@@ -7,10 +7,10 @@
 * @group: 
 * @name: slick shortcode
 * @type: PHP
-* @status: draft
+* @status: published
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-06 10:27:39
+* @updated_at: 2025-01-08 13:13:53
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
