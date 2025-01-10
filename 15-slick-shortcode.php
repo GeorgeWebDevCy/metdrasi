@@ -7,10 +7,10 @@
 * @group: 
 * @name: slick shortcode
 * @type: PHP
-* @status: published
+* @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-08 13:13:53
+* @updated_at: 2025-01-10 10:01:59
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -21,21 +21,26 @@
 ?>
 <?php if (!defined("ABSPATH")) { return;} // <Internal Doc End> ?>
 <?php
-// Enqueue Slick Slider Scripts and Styles
+// Enqueue Slick Slider Scripts and Styles Conditionally
 function enqueue_slick_slider_assets() {
-    // Enqueue Slick CSS
-    wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
-    wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+    global $post;
 
-    // Enqueue Slick JS
-    wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), '1.8.1', true);
+    // Check if the post content contains the [slick_slider] shortcode
+    if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'slick_slider')) {
+        // Enqueue Slick CSS
+        wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+        wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
-    // Enqueue Custom JS for initializing the slider
-    wp_enqueue_script('custom-slick-init', get_template_directory_uri() . '/js/custom-slick-init.js', array('slick-js', 'jquery'), '1.0', true);
+        // Enqueue Slick JS
+        wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), '1.8.1', true);
 
-    // Ensure jQuery is loaded
-    if (!wp_script_is('jquery', 'enqueued')) {
-        wp_enqueue_script('jquery');
+        // Enqueue Custom JS for initializing the slider
+        wp_enqueue_script('custom-slick-init', get_template_directory_uri() . '/js/custom-slick-init.js', array('slick-js', 'jquery'), '1.0', true);
+
+        // Ensure jQuery is loaded
+        if (!wp_script_is('jquery', 'enqueued')) {
+            wp_enqueue_script('jquery');
+        }
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_slick_slider_assets');
