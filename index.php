@@ -15,7 +15,7 @@ return array (
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-10 10:33:32',
+      'updated_at' => '2025-01-10 11:52:23',
       'run_at' => 'all',
       'priority' => 10,
       'group' => 'VC filters for content fixes',
@@ -685,7 +685,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-10 10:33:32',
+    'cached_at' => '2025-01-10 11:52:23',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
