@@ -695,5 +695,6 @@ return array (
   ),
   'error_files' => 
   array (
+    '14-vc-carousel-to-slcik.php' => 'Unmatched \'}\'',
   ),
 );
