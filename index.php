@@ -7,6 +7,32 @@ if (!defined("ABSPATH")) {return;}
 return array (
   'published' => 
   array (
+    '14-vc-carousel-to-slcik.php' => 
+    array (
+      'name' => 'vc carousel to slcik slider',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-10 10:14:21',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => 'VC filters for content fixes',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '14-vc-carousel-to-slcik.php',
+    ),
     '2-add-post-types.php' => 
     array (
       'name' => 'Add Post Types',
@@ -374,32 +400,6 @@ return array (
       'load_as_file' => '',
       'file_name' => '13-replace-contact-form-7.php',
     ),
-    '14-vc-carousel-to-slcik.php' => 
-    array (
-      'name' => 'vc carousel to slcik slider',
-      'description' => '',
-      'type' => 'PHP',
-      'status' => 'draft',
-      'tags' => '',
-      'created_at' => '',
-      'updated_at' => '2025-01-08 15:21:23',
-      'run_at' => 'all',
-      'priority' => 10,
-      'group' => 'VC filters for content fixes',
-      'condition' => 
-      array (
-        'status' => 'no',
-        'run_if' => 'assertive',
-        'items' => 
-        array (
-          0 => 
-          array (
-          ),
-        ),
-      ),
-      'load_as_file' => '',
-      'file_name' => '14-vc-carousel-to-slcik.php',
-    ),
     '15-slick-shortcode.php' => 
     array (
       'name' => 'slick shortcode',
@@ -665,8 +665,9 @@ return array (
   array (
     'all' => 
     array (
-      0 => '2-add-post-types.php',
-      1 => '3-add-taxonomies.php',
+      0 => '14-vc-carousel-to-slcik.php',
+      1 => '2-add-post-types.php',
+      2 => '3-add-taxonomies.php',
     ),
     'wp_head' => 
     array (
@@ -684,7 +685,7 @@ return array (
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-10 10:01:59',
+    'cached_at' => '2025-01-10 10:14:21',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
