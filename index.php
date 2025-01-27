@@ -15,7 +15,7 @@ return array (
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-10 11:52:23',
+      'updated_at' => '2025-01-15 15:59:18',
       'run_at' => 'all',
       'priority' => 10,
       'group' => 'VC filters for content fixes',
@@ -67,7 +67,7 @@ return array (
       'status' => 'published',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-08 15:52:34',
+      'updated_at' => '2025-01-16 11:51:16',
       'run_at' => 'wp_head',
       'priority' => 10,
       'group' => '',
@@ -82,7 +82,7 @@ return array (
           ),
         ),
       ),
-      'load_as_file' => '',
+      'load_as_file' => 'yes',
       'file_name' => '24-code-from-customizer-that.php',
     ),
     '3-add-taxonomies.php' => 
@@ -189,6 +189,123 @@ return array (
       'load_as_file' => '',
       'file_name' => '4-fix-number-counter-on.php',
     ),
+    '41-remove-font-family-froms-spans.php' => 
+    array (
+      'name' => 'remove font-family froms spans',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 15:51:21',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '41-remove-font-family-froms-spans.php',
+    ),
+    '43-flex-post-images.php' => 
+    array (
+      'name' => 'flex post images',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-16 11:09:53',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'yes',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+            0 => 
+            array (
+              'source' => 
+              array (
+                0 => 'page',
+                1 => 'post_type',
+              ),
+              'operator' => 'in',
+              'value' => 
+              array (
+                0 => 'post',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '43-flex-post-images.php',
+    ),
+    '46-padding-for-mebedds.php' => 
+    array (
+      'name' => 'padding for mebedds',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:07:45',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '46-padding-for-mebedds.php',
+    ),
+    '49-tender-button-for-diagnismoi.php' => 
+    array (
+      'name' => 'tender button for diagnismoi',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-16 12:57:01',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '49-tender-button-for-diagnismoi.php',
+    ),
     '5-hide-menu-caret-on.php' => 
     array (
       'name' => 'hide menu caret on child and language fixes',
@@ -214,6 +331,97 @@ return array (
       ),
       'load_as_file' => '',
       'file_name' => '5-hide-menu-caret-on.php',
+    ),
+    '50-fix-superscript-size.php' => 
+    array (
+      'name' => 'fix superscript size',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-16 13:19:14',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '50-fix-superscript-size.php',
+    ),
+    '51-grid-diermineia-basika-4.php' => 
+    array (
+      'name' => 'grid diermineia basika 4 offset 2',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-16 16:19:44',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'yes',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+            0 => 
+            array (
+              'source' => 
+              array (
+                0 => 'page',
+                1 => 'page_ids',
+              ),
+              'operator' => 'in',
+              'value' => 
+              array (
+                0 => '25998821',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '51-grid-diermineia-basika-4.php',
+    ),
+    '52-shortcode-finder.php' => 
+    array (
+      'name' => 'shortcode finder',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-24 13:00:19',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '52-shortcode-finder.php',
     ),
     '6-menu-line-height-fix.php' => 
     array (
@@ -330,7 +538,7 @@ return array (
       'status' => 'draft',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-07 20:55:12',
+      'updated_at' => '2025-01-14 16:11:37',
       'run_at' => 'all',
       'priority' => 10,
       'group' => 'VC filters for content fixes',
@@ -460,7 +668,7 @@ return array (
       'status' => 'draft',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-08 15:22:49',
+      'updated_at' => '2025-01-14 00:06:38',
       'run_at' => 'all',
       'priority' => 10,
       'group' => '',
@@ -486,7 +694,7 @@ return array (
       'status' => 'draft',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-08 15:22:50',
+      'updated_at' => '2025-01-14 00:06:46',
       'run_at' => 'all',
       'priority' => 10,
       'group' => '',
@@ -512,7 +720,7 @@ return array (
       'status' => 'draft',
       'tags' => '',
       'created_at' => '',
-      'updated_at' => '2025-01-08 15:22:52',
+      'updated_at' => '2025-01-14 00:06:50',
       'run_at' => 'all',
       'priority' => 10,
       'group' => '',
@@ -634,6 +842,552 @@ return array (
       'load_as_file' => '',
       'file_name' => '23-lfuent-form-button-color.php',
     ),
+    '25-ultimate-spacer-fix.php' => 
+    array (
+      'name' => 'ultimate spacer fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 00:06:54',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '25-ultimate-spacer-fix.php',
+    ),
+    '26-vc_empty_space-remover.php' => 
+    array (
+      'name' => 'vc_empty_space remover',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 00:06:41',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '26-vc_empty_space-remover.php',
+    ),
+    '27-vc_text_separetor-fix.php' => 
+    array (
+      'name' => 'vc_text_separetor fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 13:19:11',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '27-vc_text_separetor-fix.php',
+    ),
+    '28-vc_seperator-fix.php' => 
+    array (
+      'name' => 'vc_seperator fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 13:19:14',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '28-vc_seperator-fix.php',
+    ),
+    '29-ult_content_box-fix.php' => 
+    array (
+      'name' => 'ult_content_box fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 13:19:43',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '29-ult_content_box-fix.php',
+    ),
+    '30-vc_row_inner.php' => 
+    array (
+      'name' => 'vc_colum_inner',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:06:56',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '30-vc_row_inner.php',
+    ),
+    '31-vc_row_inner.php' => 
+    array (
+      'name' => 'vc_row_inner',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 13:19:17',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '31-vc_row_inner.php',
+    ),
+    '32-vc_cta.php' => 
+    array (
+      'name' => 'vc_cta',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 13:19:30',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '32-vc_cta.php',
+    ),
+    '33-ult_closing-tags.php' => 
+    array (
+      'name' => 'ult_closing tags',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:04:50',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '33-ult_closing-tags.php',
+    ),
+    '34-vc_column_inner.php' => 
+    array (
+      'name' => '[/vc_column_inner]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:04:22',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '34-vc_column_inner.php',
+    ),
+    '35-vc_row_inner.php' => 
+    array (
+      'name' => '[/vc_row_inner]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:08:07',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '35-vc_row_inner.php',
+    ),
+    '36-vc_cta.php' => 
+    array (
+      'name' => '[/vc_cta]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:07:59',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '36-vc_cta.php',
+    ),
+    '37-vc_column_inner.php' => 
+    array (
+      'name' => '[/vc_column_inner]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:07:51',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '37-vc_column_inner.php',
+    ),
+    '38-vc_row_inner.php' => 
+    array (
+      'name' => '[/vc_row_inner]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:08:09',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '38-vc_row_inner.php',
+    ),
+    '39-whiite-letters-in-sppans.php' => 
+    array (
+      'name' => 'whiite letters in spans to grey',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-14 16:05:59',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '39-whiite-letters-in-sppans.php',
+    ),
+    '40-vc_custom_heading.php' => 
+    array (
+      'name' => '[vc_custom_heading]',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:40:00',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '40-vc_custom_heading.php',
+    ),
+    '42-fix-single-with-wp_query.php' => 
+    array (
+      'name' => 'fix single with wp_query',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:39:34',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '42-fix-single-with-wp_query.php',
+    ),
+    '44-ultimate-google-map-shortcode.php' => 
+    array (
+      'name' => 'ultimate google map shortcode fix',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:43:53',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '44-ultimate-google-map-shortcode.php',
+    ),
+    '45-remove-closing-gmap.php' => 
+    array (
+      'name' => 'remove closing gmap',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:43:46',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '45-remove-closing-gmap.php',
+    ),
+    '47-vc-replace-v2.php' => 
+    array (
+      'name' => 'vc replace v2',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:40:26',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '47-vc-replace-v2.php',
+    ),
+    '48-vc_singe_image_v3.php' => 
+    array (
+      'name' => 'vc_singe_image_v3',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-15 15:58:51',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '48-vc_singe_image_v3.php',
+    ),
     '10-fix-video-module-from.php' => 
     array (
       'name' => 'Fix video module from VC',
@@ -668,24 +1422,31 @@ return array (
       0 => '14-vc-carousel-to-slcik.php',
       1 => '2-add-post-types.php',
       2 => '3-add-taxonomies.php',
+      3 => '41-remove-font-family-froms-spans.php',
+      4 => '52-shortcode-finder.php',
     ),
     'wp_head' => 
     array (
       0 => '24-code-from-customizer-that.php',
       1 => '3-fix-grid-on-ceb8ceb5cf83ceb5ceb9cf82.php',
       2 => '4-fix-number-counter-on.php',
-      3 => '5-hide-menu-caret-on.php',
-      4 => '6-menu-line-height-fix.php',
-      5 => '7-read-more-postion-fix.php',
-      6 => '8-fix-vc-fluid-grid.php',
-      7 => '9-gallery-grid-fix-2x2.php',
+      3 => '43-flex-post-images.php',
+      4 => '46-padding-for-mebedds.php',
+      5 => '49-tender-button-for-diagnismoi.php',
+      6 => '5-hide-menu-caret-on.php',
+      7 => '50-fix-superscript-size.php',
+      8 => '51-grid-diermineia-basika-4.php',
+      9 => '6-menu-line-height-fix.php',
+      10 => '7-read-more-postion-fix.php',
+      11 => '8-fix-vc-fluid-grid.php',
+      12 => '9-gallery-grid-fix-2x2.php',
     ),
   ),
   'meta' => 
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-10 11:52:23',
+    'cached_at' => '2025-01-24 13:00:19',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',

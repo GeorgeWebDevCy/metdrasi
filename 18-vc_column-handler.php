@@ -10,7 +10,7 @@
 * @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-08 15:22:50
+* @updated_at: 2025-01-14 00:06:46
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -53,7 +53,7 @@ function remove_vc_column_shortcodes() {
             $content = get_post_field('post_content', $post_id);
 
             // Remove all occurrences of [vc_column] and [/vc_column]
-            $updated_content = str_replace(['[vc_column]', '[/vc_column]'], '', $content);
+            $updated_content = preg_replace('/\\[vc_column[^\\]]*\\]|\\[\\/vc_column\\]/', '', $content);
 
             // Only update the post if the content has changed
             if ($updated_content !== $content) {

@@ -5,12 +5,12 @@
 * @description: 
 * @tags: 
 * @group: 
-* @name: vc_row cleaner
+* @name: [/vc_column_inner]
 * @type: PHP
 * @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-14 00:06:38
+* @updated_at: 2025-01-14 16:04:22
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -21,7 +21,7 @@
 ?>
 <?php if (!defined("ABSPATH")) { return;} // <Internal Doc End> ?>
 <?php
-function remove_vc_row_shortcodes() {
+function remove_vc_column_inner_closing_shortcodes() {
     // Get all public post types
     $post_types = get_post_types(['public' => true], 'names');
 
@@ -37,7 +37,7 @@ function remove_vc_row_shortcodes() {
         $args = [
             'post_type'      => $post_type,
             'posts_per_page' => 10, // Batch size for processing
-            'offset'         => (int) get_option('remove_vc_row_offset_' . $post_type, 0),
+            'offset'         => (int) get_option('remove_vc_column_inner_closing_offset_' . $post_type, 0),
         ];
 
         // Execute WP_Query with args
@@ -52,9 +52,8 @@ function remove_vc_row_shortcodes() {
             $post_id = get_the_ID();
             $content = get_post_field('post_content', $post_id);
 
-            // Remove all occurrences of [vc_row] and [/vc_row]
-            $updated_content = preg_replace('/\\[vc_row[^\\]]*\\]|\\[\\/vc_row\\]/', '', $content);
-
+            // Remove all occurrences of [/vc_column_inner]
+            $updated_content = preg_replace('/\\[\\/vc_column_inner\\]/', '', $content);
 
             // Only update the post if the content has changed
             if ($updated_content !== $content) {
@@ -69,14 +68,14 @@ function remove_vc_row_shortcodes() {
 
         // Update offset for batch processing
         $processed_posts = $query->post_count;
-        $current_offset = (int) get_option('remove_vc_row_offset_' . $post_type, 0);
+        $current_offset = (int) get_option('remove_vc_column_inner_closing_offset_' . $post_type, 0);
         $new_offset = $current_offset + $processed_posts;
 
         if ($new_offset >= $query->found_posts) {
-            update_option('remove_vc_row_done_' . $post_type, true);
-            delete_option('remove_vc_row_offset_' . $post_type);
+            update_option('remove_vc_column_inner_closing_done_' . $post_type, true);
+            delete_option('remove_vc_column_inner_closing_offset_' . $post_type);
         } else {
-            update_option('remove_vc_row_offset_' . $post_type, $new_offset);
+            update_option('remove_vc_column_inner_closing_offset_' . $post_type, $new_offset);
         }
 
         $console_log['remaining_posts'] += $query->found_posts - $new_offset;
@@ -90,22 +89,3 @@ function remove_vc_row_shortcodes() {
     echo 'console.log(' . json_encode($console_log) . ');';
     echo '</script>';
 }
-
-// Run the function in batches when needed
-add_action('init', function () {
-    // Process in batches until all posts are done
-    $done_for_all_post_types = true;
-
-    $post_types = get_post_types(['public' => true], 'names');
-    foreach ($post_types as $post_type) {
-        if (!get_option('remove_vc_row_done_' . $post_type)) {
-            $done_for_all_post_types = false;
-            remove_vc_row_shortcodes();
-            break; // Process one post type at a time per request
-        }
-    }
-
-    if ($done_for_all_post_types) {
-        echo '<script>console.log("All post types processed successfully, [vc_row] and [/vc_row] removed.");</script>';
-    }
-});

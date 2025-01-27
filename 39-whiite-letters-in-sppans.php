@@ -4,13 +4,13 @@
 *
 * @description: 
 * @tags: 
-* @group: VC filters for content fixes
-* @name: VC single image fix
+* @group: 
+* @name: whiite letters in spans to grey
 * @type: PHP
 * @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-14 16:11:37
+* @updated_at: 2025-01-14 16:05:59
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -21,7 +21,7 @@
 ?>
 <?php if (!defined("ABSPATH")) { return;} // <Internal Doc End> ?>
 <?php
-function replace_vc_single_image_shortcode() {
+function replace_white_color_in_spans() {
     // Get all public post types
     $post_types = get_post_types(['public' => true], 'names');
 
@@ -37,7 +37,7 @@ function replace_vc_single_image_shortcode() {
         $args = [
             'post_type'      => $post_type,
             'posts_per_page' => 10, // Batch size for processing
-            'offset'         => (int) get_option('replace_vc_single_image_offset_' . $post_type, 0),
+            'offset'         => (int) get_option('replace_white_color_in_spans_offset_' . $post_type, 0),
         ];
 
         // Execute WP_Query with args
@@ -52,34 +52,21 @@ function replace_vc_single_image_shortcode() {
             $post_id = get_the_ID();
             $content = get_post_field('post_content', $post_id);
 
-            // Find all [vc_single_image] shortcodes
-            //preg_match_all('/\[vc_single_image(?: [^\]]*image="(\d+)")[^\]]*img_size="([^"]+)"[^\]]*\]/', $content, $matches, PREG_SET_ORDER);
-            preg_match_all('/\[vc_single_image.*?image="(\d+)".*?img_size="([^"]+)".*?\]/', $content, $matches, PREG_SET_ORDER);
+            // Replace white color (#ffffff or #FFF) with #666666 in inline styles of <span> tags
+            $updated_content = preg_replace_callback(
+                '/<span([^>]*?)style="([^"]*?)color: ?(#fff|#ffffff);?([^"]*?)"([^>]*?)>(.*?)<\\/span>/is',
+                function ($matches) {
+                    return '<span' . $matches[1] . 'style="' . $matches[2] . 'color: #666666;' . $matches[4] . '"' . $matches[5] . '>' . $matches[6] . '</span>';
+                },
+                $content
+            );
 
-            if (!empty($matches)) {
-                foreach ($matches as $match) {
-                    $image_id = (int) $match[1]; // Image ID
-                    $img_size = $match[2];       // Image size (e.g., medium, large)
-
-                    // Get the image URL by attachment ID and size
-                    $image_url = wp_get_attachment_image_url($image_id, $img_size);
-
-                    if ($image_url) {
-                        // Generate the <img> tag
-                        $img_tag = sprintf('<img src="%s" alt="" />', esc_url($image_url));
-
-                        // Replace the shortcode with the generated <img> tag
-                        $content = str_replace($match[0], $img_tag, $content);
-                    }
-                }
-
-                // Only update the post if the content has changed
-                if ($content !== get_post_field('post_content', $post_id)) {
-                    wp_update_post([
-                        'ID'           => $post_id,
-                        'post_content' => $content,
-                    ]);
-                }
+            // Only update the post if the content has changed
+            if ($updated_content !== $content) {
+                wp_update_post([
+                    'ID'           => $post_id,
+                    'post_content' => $updated_content,
+                ]);
             }
 
             $console_log['processed_posts']++;
@@ -87,14 +74,14 @@ function replace_vc_single_image_shortcode() {
 
         // Update offset for batch processing
         $processed_posts = $query->post_count;
-        $current_offset = (int) get_option('replace_vc_single_image_offset_' . $post_type, 0);
+        $current_offset = (int) get_option('replace_white_color_in_spans_offset_' . $post_type, 0);
         $new_offset = $current_offset + $processed_posts;
 
         if ($new_offset >= $query->found_posts) {
-            update_option('replace_vc_single_image_done_' . $post_type, true);
-            delete_option('replace_vc_single_image_offset_' . $post_type);
+            update_option('replace_white_color_in_spans_done_' . $post_type, true);
+            delete_option('replace_white_color_in_spans_offset_' . $post_type);
         } else {
-            update_option('replace_vc_single_image_offset_' . $post_type, $new_offset);
+            update_option('replace_white_color_in_spans_offset_' . $post_type, $new_offset);
         }
 
         $console_log['remaining_posts'] += $query->found_posts - $new_offset;
@@ -116,14 +103,14 @@ add_action('init', function () {
 
     $post_types = get_post_types(['public' => true], 'names');
     foreach ($post_types as $post_type) {
-        if (!get_option('replace_vc_single_image_done_' . $post_type)) {
+        if (!get_option('replace_white_color_in_spans_done_' . $post_type)) {
             $done_for_all_post_types = false;
-            replace_vc_single_image_shortcode();
+            replace_white_color_in_spans();
             break; // Process one post type at a time per request
         }
     }
 
     if ($done_for_all_post_types) {
-        echo '<script>console.log("All post types processed successfully.");</script>';
+        echo '<script>console.log("All post types processed successfully, white color replaced with #666666 in <span> tags.");</script>';
     }
 });
