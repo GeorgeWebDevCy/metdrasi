@@ -423,6 +423,58 @@ return array (
       'load_as_file' => '',
       'file_name' => '52-shortcode-finder.php',
     ),
+    '54-unstick-from-date.php' => 
+    array (
+      'name' => 'unstick from date',
+      'description' => '',
+      'type' => 'css',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-29 12:51:57',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '54-unstick-from-date.php',
+    ),
+    '55-update-single-image-width.php' => 
+    array (
+      'name' => 'update single image width',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-02-04 13:40:53',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '55-update-single-image-width.php',
+    ),
     '6-menu-line-height-fix.php' => 
     array (
       'name' => 'menu line height fix',
@@ -1388,6 +1440,32 @@ return array (
       'load_as_file' => '',
       'file_name' => '48-vc_singe_image_v3.php',
     ),
+    '53-vc-buttons-to-divi.php' => 
+    array (
+      'name' => 'vc buttons to divi buttons',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'draft',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-01-27 15:59:47',
+      'run_at' => 'all',
+      'priority' => 10,
+      'group' => '',
+      'condition' => 
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' => 
+        array (
+          0 => 
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '53-vc-buttons-to-divi.php',
+    ),
     '10-fix-video-module-from.php' => 
     array (
       'name' => 'Fix video module from VC',
@@ -1424,6 +1502,7 @@ return array (
       2 => '3-add-taxonomies.php',
       3 => '41-remove-font-family-froms-spans.php',
       4 => '52-shortcode-finder.php',
+      5 => '55-update-single-image-width.php',
     ),
     'wp_head' => 
     array (
@@ -1436,17 +1515,18 @@ return array (
       6 => '5-hide-menu-caret-on.php',
       7 => '50-fix-superscript-size.php',
       8 => '51-grid-diermineia-basika-4.php',
-      9 => '6-menu-line-height-fix.php',
-      10 => '7-read-more-postion-fix.php',
-      11 => '8-fix-vc-fluid-grid.php',
-      12 => '9-gallery-grid-fix-2x2.php',
+      9 => '54-unstick-from-date.php',
+      10 => '6-menu-line-height-fix.php',
+      11 => '7-read-more-postion-fix.php',
+      12 => '8-fix-vc-fluid-grid.php',
+      13 => '9-gallery-grid-fix-2x2.php',
     ),
   ),
   'meta' => 
   array (
     'secret_key' => 'a729df364cbf81d98dbecf6f8e61593c',
     'force_disabled' => 'no',
-    'cached_at' => '2025-01-24 13:00:19',
+    'cached_at' => '2025-02-04 13:40:53',
     'cached_version' => '10.34',
     'cashed_domain' => 'https://metadrasi.georgenicolaou.me',
     'legacy_status' => 'new',
