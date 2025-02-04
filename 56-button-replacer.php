@@ -10,7 +10,7 @@
 * @status: draft
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-02-04 20:53:38
+* @updated_at: 2025-02-04 21:05:32
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -69,7 +69,7 @@ function batch_replace_vc_with_divi() {
 
         echo "<script>console.log('Processing Post ID: {$post->ID}');</script>";
 
-        // Handle VC buttons
+        // Handle VC buttons (MP3, ZIP, PDF)
         $new_content = preg_replace_callback('/\[vc_btn\s(.*?)\]/', function ($matches) {
             $attributes = shortcode_parse_atts($matches[1]);
             if (!$attributes) return $matches[0];
@@ -88,7 +88,7 @@ function batch_replace_vc_with_divi() {
         }, $new_content);
 
         // Convert <a> buttons (MP3, ZIP, PDF)
-        $new_content = preg_replace_callback('/<a\s[^>]*class="vc_general vc_btn3[^"]*"\s[^>]*href="([^"]+)"[^>]*>\s*(?:<i[^>]*class="([^"]+)">)?\s*([^<]+)\s*<\/a>/i', function ($matches) {
+        $new_content = preg_replace_callback('/<a\s[^>]*href="([^"]+)"[^>]*>\s*(?:<i[^>]*class="([^"]+)">)?\s*([^<]+)\s*<\/a>/i', function ($matches) {
             $button_url = fully_decode_url($matches[1]);
             $button_icon = !empty($matches[2]) ? esc_attr($matches[2]) : '%%198%%';
             $button_text = esc_attr(trim($matches[3]));
@@ -100,16 +100,6 @@ function batch_replace_vc_with_divi() {
             }
 
             return '[et_pb_button button_text="' . $button_text . '" button_url="' . esc_url($button_url) . '" button_alignment="center" button_bg_color="#6A5ACD" button_text_color="#FFFFFF" custom_button="on" icon="' . $button_icon . '"]';
-        }, $new_content);
-
-        // Convert MP3 Buttons that were not captured correctly
-        $new_content = preg_replace_callback('/\[vc_btn\s[^]]*title="([^"]+)"[^]]*link="url:([^"]+)\|\|target:[^"]+"[^]]*\]/', function ($matches) {
-            $button_text = esc_attr(trim($matches[1]));
-            $button_url = fully_decode_url($matches[2]);
-
-            echo "<script>console.log('Fixed MP3: " . addslashes($button_text) . " => " . addslashes($button_url) . "');</script>";
-
-            return '[et_pb_audio title="' . $button_text . '" audio_url="' . esc_url($button_url) . '" play_pause="on" show_image="off"]';
         }, $new_content);
 
         // Convert Issuu iframe embeds
@@ -127,6 +117,16 @@ function batch_replace_vc_with_divi() {
             }
 
             return $matches[0];
+        }, $new_content);
+
+        // Fix MP3 buttons that were not captured
+        $new_content = preg_replace_callback('/\[vc_btn\s[^]]*title="([^"]+)"[^]]*link="url:([^"]+)\|\|target:[^"]+"[^]]*\]/', function ($matches) {
+            $button_text = esc_attr(trim($matches[1]));
+            $button_url = fully_decode_url($matches[2]);
+
+            echo "<script>console.log('Fixed MP3: " . addslashes($button_text) . " => " . addslashes($button_url) . "');</script>";
+
+            return '[et_pb_audio title="' . $button_text . '" audio_url="' . esc_url($button_url) . '" play_pause="on" show_image="off"]';
         }, $new_content);
 
         // Log before updating
