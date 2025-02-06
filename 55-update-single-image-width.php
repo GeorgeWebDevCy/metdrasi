@@ -7,10 +7,10 @@
 * @group: 
 * @name: update single image width
 * @type: PHP
-* @status: draft
+* @status: published
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-02-04 15:42:34
+* @updated_at: 2025-02-05 11:02:40
 * @is_valid: 
 * @updated_by: 
 * @priority: 10

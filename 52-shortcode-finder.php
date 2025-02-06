@@ -10,7 +10,7 @@
 * @status: published
 * @created_by: 
 * @created_at: 
-* @updated_at: 2025-01-24 13:00:19
+* @updated_at: 2025-02-06 08:40:20
 * @is_valid: 
 * @updated_by: 
 * @priority: 10
@@ -37,14 +37,23 @@ function sidebar_finder_shortcode() {
             document.addEventListener("DOMContentLoaded", function() {
                 let sidebar = document.querySelector(".et_pb_column_1_3");
                 let content = document.querySelector(".et_pb_column_2_3");
+                let divi_sidebar =document.querySelector(".et_pb_column.et_pb_column_1_4.et_pb_column_1_tb_body.et_pb_css_mix_blend_mode_passthrough");
+                let divi_content = document.querySelector(".et_pb_with_border.et_pb_column_3_4.et_pb_column.et_pb_column_0_tb_body.et_pb_css_mix_blend_mode_passthrough");
                 let sidebarValue = "' . esc_js($custom_shortcode) . '".trim();
 
                 if (!sidebarValue || sidebarValue === "null" || sidebarValue === "") {
                     console.log("Sidebar is empty, removing column...");
                     if (sidebar && content) {
+                    console.log("Detected Normal Sidebar");
                         sidebar.style.display = "none";
                         content.style.width = "100%";
                     }
+            if (divi_sidebar && divi_content) {
+            console.log("Detected Divi Sidebar");
+                        divi_sidebar.style.display = "none";
+                        divi_content.style.width = "100%";
+                    }
+                    
                 } else {
                     console.log("Sidebar shortcode found, displaying sidebar...");
                 }
