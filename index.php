@@ -579,6 +579,32 @@ return array (
       'load_as_file' => '',
       'file_name' => '9-gallery-grid-fix-2x2.php',
     ),
+    '58-remove-menu-cta-mobile.php' =>
+    array (
+      'name' => 'remove menu-cta class on tablet and mobile',
+      'description' => '',
+      'type' => 'PHP',
+      'status' => 'published',
+      'tags' => '',
+      'created_at' => '',
+      'updated_at' => '2025-02-06 12:00:00',
+      'run_at' => 'wp_head',
+      'priority' => 10,
+      'group' => '',
+      'condition' =>
+      array (
+        'status' => 'no',
+        'run_if' => 'assertive',
+        'items' =>
+        array (
+          0 =>
+          array (
+          ),
+        ),
+      ),
+      'load_as_file' => '',
+      'file_name' => '58-remove-menu-cta-mobile.php',
+    ),
   ),
   'draft' => 
   array (
@@ -1572,6 +1598,7 @@ return array (
       11 => '7-read-more-postion-fix.php',
       12 => '8-fix-vc-fluid-grid.php',
       13 => '9-gallery-grid-fix-2x2.php',
+      14 => '58-remove-menu-cta-mobile.php',
     ),
   ),
   'meta' => 
