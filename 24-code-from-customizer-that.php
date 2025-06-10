@@ -181,11 +181,6 @@ figure.dp-dfg-image.entry-thumb img {
     position: absolute !important;
     right: 0 !important;
     background-color: #fff !important;
-    display: none !important;
-}
-
-.menu-cta:hover .sub-menu {
-    display: block !important;
 }
 
 /* Mobile Menu adjustments */
